@@ -3,8 +3,8 @@ from django.db import models
 
 class Answer(models.Model):
     class CorrectAnswer(models.IntegerChoices):
-        NO = 0, ("No")
-        YES = 1, ("Yes")
+        NO = 0
+        YES = 1
 
     question = models.ForeignKey('question.Question', on_delete=models.CASCADE, related_name='questions')
     testResult = models.ForeignKey('testresult.testResult', on_delete=models.CASCADE, related_name='testresults')

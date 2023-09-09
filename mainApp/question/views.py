@@ -7,7 +7,5 @@ class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
 
-def index(request):
-    return render(request, 'question/index.html')
 
 
